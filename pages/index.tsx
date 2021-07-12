@@ -224,7 +224,7 @@ export default function IndexPage(
                 <div className="rounded-lg px-6 py-4 bg-white overflow-hidden shadow">
                   <ul className="divide-y divide-gray-200">
                     {!error ? (
-                      posts.bearish.map((item, key) => {
+                      posts?.bearish.map((item, key) => {
                         const currencies = item.currencies
                           ? item.currencies.map(({ title }) => title)
                           : [];
@@ -286,7 +286,7 @@ export default function IndexPage(
                 <div className="rounded-lg px-6 py-4 bg-white overflow-hidden shadow">
                   <ul className="divide-y divide-gray-200">
                     {!error ? (
-                      posts.bullish.map((item, key) => {
+                      posts?.bullish.map((item, key) => {
                         const currencies = item.currencies
                           ? item.currencies.map(({ title }) => title)
                           : [];
