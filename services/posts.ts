@@ -1,7 +1,7 @@
 export interface Post {
   title: string;
   published_at: string;
-  source: object;
+  domain: string;
   url: string;
   currencies: object[];
 }
