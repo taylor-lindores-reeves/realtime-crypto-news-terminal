@@ -34,6 +34,7 @@ export default function IndexPage(
 
   const posts = data.posts || props.posts;
 
+  console.log(posts);
   return (
     <Layout title="Bullish / Bearish News">
       <div className="grid grid-cols-1 gap-4 items-start lg:grid-cols-4 lg:gap-8">
@@ -58,7 +59,7 @@ export default function IndexPage(
                             <div className="flex items-center justify-between">
                               <div className="flex flex-col">
                                 <a
-                                  href={item.domain}
+                                  href={"https://" + item.domain}
                                   target="_blank"
                                   className="text-xs text-gray-700 hover:text-gray-900"
                                 >
@@ -121,10 +122,11 @@ export default function IndexPage(
                             <div className="flex items-center justify-between">
                               <div className="flex flex-col">
                                 <a
-                                  href={item.source.domain}
+                                  href={"https://" + item.domain}
+                                  target="_blank"
                                   className="text-xs text-gray-700 hover:text-gray-900"
                                 >
-                                  {item.source.domain}
+                                  {item.domain}
                                 </a>
                                 <a
                                   href={item.url}
