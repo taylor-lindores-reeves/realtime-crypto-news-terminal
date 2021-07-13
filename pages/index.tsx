@@ -32,7 +32,7 @@ export default function IndexPage(
     refreshWhenOffline: true
   });
 
-  const posts = props.posts || data;
+  const posts = data.posts || props.posts;
 
   return (
     <Layout title="Bullish / Bearish News">

@@ -51,10 +51,10 @@ export default function Header() {
               <div className="grid grid-cols-3 gap-8 items-center">
                 <div className="col-span-2">
                   <nav className="flex space-x-4">
-                    {navLinks.map((link) =>
+                    {navLinks.map((link, key) =>
                       link.link ? (
                         router.pathname === "/" ? (
-                          <Link href="/news">
+                          <Link key={key} href="/news">
                             <a
                               className={classNames(
                                 link.active
@@ -67,7 +67,7 @@ export default function Header() {
                             </a>
                           </Link>
                         ) : (
-                          <Link href={link.href}>
+                          <Link key={key} href={link.href}>
                             <a
                               className={classNames(
                                 link.active

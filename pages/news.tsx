@@ -23,7 +23,7 @@ export default function IndexPage(
 ) {
   const { data, error } = useSWR("/api/all", fetcher, {
     initialData: props.posts,
-    refreshInterval: 10000,
+    refreshInterval: 1000,
     refreshWhenHidden: true,
     refreshWhenOffline: true
   });
