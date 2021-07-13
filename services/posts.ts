@@ -23,3 +23,13 @@ export async function fetchPosts() {
 
   return { bullish: bullish.results, bearish: bearish.results };
 }
+
+export async function fetchAllPosts() {
+  const url = "https://cryptopanic.com";
+  const key = process.env.CRYPTO_PANIC_API_KEY;
+  const path = `/api/v1/posts/?auth_token=${key}&public`;
+
+  const { results } = await fetch(url + path).then((res) => res.json());
+
+  return { posts: results };
+}
